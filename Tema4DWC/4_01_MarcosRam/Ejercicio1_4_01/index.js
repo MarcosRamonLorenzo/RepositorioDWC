@@ -1,5 +1,5 @@
 "use strict";
-import { crearH1 } from "./libreria/funciones.js";
+import { crearH1 } from "../libreria/funciones.js";
 
 window.onload = () => {
   let intervalo;
