@@ -14,8 +14,12 @@ window.onload = () => {
   });
 
   let botonParar = document.getElementById("botonAcabar");
-  botonParar.addEventListener("click", () => {
-    //Paramos el intérvalo.
-    clearInterval(intervalo);
-  });
+  botonParar.addEventListener(
+    "click",
+    () => {
+      //Paramos el intérvalo.
+      clearInterval(intervalo);
+    },
+    false
+  );
 };
