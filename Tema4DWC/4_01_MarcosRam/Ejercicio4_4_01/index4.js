@@ -5,11 +5,11 @@ window.onload = () => {
     document.getElementsByClassName("elementoImpar");
 
   for (let i = 0; i < elementosDivPrincipales.length; i++) {
+    //Le añado el evento a cada elemento impar.
     let elementoDiv = elementosDivPrincipales[i];
     elementoDiv.addEventListener("click", (event) => {
-      console.log(event.target);
-      let hermanodeElemento =
-        event.target.nextElementSibling.classList.toggle("ocultar");
+      //Le añado la clase ocultar o se la quito al hermano de el elemento.
+      event.target.nextElementSibling.classList.toggle("ocultar");
     });
   }
 };

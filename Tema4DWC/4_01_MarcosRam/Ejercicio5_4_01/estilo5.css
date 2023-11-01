@@ -1,0 +1,13 @@
+#draggable {
+  height: 200px;
+}
+
+#soltable img {
+  height: 600px;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
