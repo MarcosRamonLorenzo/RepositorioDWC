@@ -1,5 +1,6 @@
 "use strict";
 
+//Ejercicio 1.
 const crearH1 = () => {
   //Cogemos el contenedor H1 y le añadimos un h1.
   /*Me he creado un contenedor de h1 ya que si lo pones 
@@ -8,6 +9,7 @@ const crearH1 = () => {
   document.getElementById("contenedorH1").innerHTML += "<h1>¡Hola Feo!</h1>";
 };
 
+//Ejercicio 2.
 const fondoAleatorio = () => {
   let letras = [
     "a",

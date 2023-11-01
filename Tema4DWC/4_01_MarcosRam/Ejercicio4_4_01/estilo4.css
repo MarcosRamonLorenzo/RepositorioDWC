@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+#contenedor {
+  border: 0.5px solid black;
+  width: 20%;
+  padding: 2% 0;
+}
+
+.elementoPar {
+  margin: 2% 0% 2% 15%;
+}
+
+.elementoImpar {
+  font-weight: bold;
+  padding: 1%;
+  background-color: beige;
+  cursor: pointer;
+}
+
+.ocultar {
+  display: none;
+}
