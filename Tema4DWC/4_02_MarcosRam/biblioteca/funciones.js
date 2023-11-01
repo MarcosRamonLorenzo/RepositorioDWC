@@ -21,10 +21,27 @@ const rellenarImagenes = () => {
   let arrayNumAleatorios = generarNumerosAleatorios();
   for (let i = 0; i < 9; i++) {
     //Por cada iteración añadimos una imagen.
-    contenedorImagenes.innerHTML += `<img class="imagen" src="./img/${arrayNumAleatorios[i]}.png" alt="Foto${arrayNumAleatorios[i]}">`;
     //Le ponemos el atributo draggable a cada foto.
-    contenedorImagenes.children[i].setAttribute("draggable", true);
+    //Guardlo el id ya que con el
+    contenedorImagenes.innerHTML += `<img id="imagen${arrayNumAleatorios[i]}" class="imagen" src="./img/${arrayNumAleatorios[i]}.png" alt="Foto${arrayNumAleatorios[i]}" draggable="true">`;
   }
 };
 
-export { rellenarImagenes };
+const validarPuzzle = () => {
+  let contenedorPuzzle = document.getElementById("contenedorPuzzle").children;
+  let validacion = true;
+  for (let i = 0; i < contenedorPuzzle.length; i++) {
+    const imagen = contenedorPuzzle[i].firstElementChild;
+    if (!imagen || imagen.getAttribute("src") !== `./img/${i}.png`) {
+      console.log("a");
+      validacion = false;
+      break; // Puedes detener la verificación tan pronto como encuentres una discrepancia
+    }
+  }
+  if (validacion) {
+    document.getElementById("contenedorPuzzle").innerHTML =
+      "<h1>Has ganado</h1>";
+  }
+};
+
+export { rellenarImagenes, validarPuzzle };

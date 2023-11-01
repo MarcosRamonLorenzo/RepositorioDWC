@@ -1,4 +1,4 @@
-.contenedorGeneralArrastable {
+#contenedorGeneralArrastable {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,8 +26,8 @@
   width: 47rem;
 }
 
-.contendorPieza {
-  width: 235px;
+.soltable {
+  width: 231.05px;
   height: 130px;
   margin: 1%;
   background-color: rgb(201, 151, 248);
