@@ -30,17 +30,18 @@ const rellenarImagenes = () => {
 const validarPuzzle = () => {
   let contenedorPuzzle = document.getElementById("contenedorPuzzle").children;
   let validacion = true;
+
   for (let i = 0; i < contenedorPuzzle.length; i++) {
-    const imagen = contenedorPuzzle[i].firstElementChild;
-    if (!imagen || imagen.getAttribute("src") !== `./img/${i}.png`) {
-      console.log("a");
+    //Si alguno no tiene la classe validado no lo validará.
+    if (!contenedorPuzzle[i].classList.contains("validado")) {
       validacion = false;
-      break; // Puedes detener la verificación tan pronto como encuentres una discrepancia
+      break;
     }
   }
   if (validacion) {
-    document.getElementById("contenedorPuzzle").innerHTML =
-      "<h1>Has ganado</h1>";
+    document.getElementById(
+      "botonYwin"
+    ).innerHTML += `<h1 id="mensajeGanador">Has ganado</h1>`;
   }
 };
 
