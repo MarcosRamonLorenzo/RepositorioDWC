@@ -42,6 +42,15 @@ const validarPuzzle = () => {
     document.getElementById(
       "botonYwin"
     ).innerHTML += `<h1 id="mensajeGanador">Has ganado</h1>`;
+    document.getElementById("reiniciar").addEventListener(
+      "click",
+      () => {
+        //Con esta metodo reiniciamos la página y la partida.
+        console.log("a");
+        location.reload();
+      },
+      false
+    );
   }
 };
 

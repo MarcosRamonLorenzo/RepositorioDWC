@@ -63,6 +63,7 @@ window.onload = () => {
     "click",
     () => {
       //Con esta metodo reiniciamos la página y la partida.
+      console.log("a");
       location.reload();
     },
     false
