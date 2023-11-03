@@ -7,9 +7,7 @@ window.onload = () => {
   document.getElementById("contenedorGeneralArrastable").addEventListener(
     "dragstart",
     (evento) => {
-      console.log(evento.target);
       evento.dataTransfer.setData("id", evento.target.id);
-      console.log(evento.dataTransfer.getData("id"));
     },
     false
   );
@@ -26,7 +24,7 @@ window.onload = () => {
     "drop",
     (evento) => {
       evento.preventDefault();
-
+      //Si haces el drop en el elemento soltablable o en el contenedor de imagenes de vuelta.
       if (
         evento.target.classList.contains("soltable") ||
         evento.target.id == "contenedorImagenes"
@@ -50,7 +48,11 @@ window.onload = () => {
         }
         //Si el index es igual a el número de la imagen quiere decir que la imagen esta en su sitio y le ponemos la class validada.
         if (elemento.getAttribute("src").charAt(6) == index) {
-          evento.target.classList.add("validado");
+          elemento.classList.add("validado");
+        } else {
+          if (elemento.classList.contains("validado")) {
+            elemento.classList.remove("validado");
+          }
         }
       }
 
@@ -63,7 +65,7 @@ window.onload = () => {
     "click",
     () => {
       //Con esta metodo reiniciamos la página y la partida.
-      console.log("a");
+
       location.reload();
     },
     false

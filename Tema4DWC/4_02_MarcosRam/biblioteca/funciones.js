@@ -28,29 +28,34 @@ const rellenarImagenes = () => {
 };
 
 const validarPuzzle = () => {
-  let contenedorPuzzle = document.getElementById("contenedorPuzzle").children;
+  let contenedorPuzzle = document.getElementsByTagName("img");
   let validacion = true;
 
   for (let i = 0; i < contenedorPuzzle.length; i++) {
     //Si alguno no tiene la classe validado no lo validará.
     if (!contenedorPuzzle[i].classList.contains("validado")) {
       validacion = false;
+
       break;
     }
   }
   if (validacion) {
-    document.getElementById(
-      "botonYwin"
-    ).innerHTML += `<h1 id="mensajeGanador">Has ganado</h1>`;
+    document.getElementById("mensajeGanador").classList.remove("oculto");
     document.getElementById("reiniciar").addEventListener(
       "click",
       () => {
         //Con esta metodo reiniciamos la página y la partida.
-        console.log("a");
+
         location.reload();
       },
       false
     );
+  } else {
+    if (
+      !document.getElementById("mensajeGanador").classList.contains("oculto")
+    ) {
+      document.getElementById("mensajeGanador").classList.add("oculto");
+    }
   }
 };
 
