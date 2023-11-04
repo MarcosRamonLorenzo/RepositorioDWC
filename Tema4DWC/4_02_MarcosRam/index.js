@@ -7,6 +7,7 @@ window.onload = () => {
   document.getElementById("contenedorGeneralArrastable").addEventListener(
     "dragstart",
     (evento) => {
+      //Cogemos el id del elemento que arrastamos con el setData ya que luego el event.target dejará de ser la imagen en el drop.
       evento.dataTransfer.setData("id", evento.target.id);
     },
     false
@@ -15,6 +16,7 @@ window.onload = () => {
   document.getElementById("contenedorGeneralArrastable").addEventListener(
     "dragover",
     (evento) => {
+      //Prevenimos el comportamiento por defecto.
       evento.preventDefault();
     },
     false
@@ -29,10 +31,11 @@ window.onload = () => {
         evento.target.classList.contains("soltable") ||
         evento.target.id == "contenedorImagenes"
       ) {
+        //Cogemos el elemento con el id que guardamos en el set data.
         let elemento = document.getElementById(
           evento.dataTransfer.getData("id")
         );
-
+        //Lo introducimos como hijo.
         evento.target.appendChild(elemento);
 
         //Cogemos a todos lo hijos del contenedor puzzle.
@@ -46,7 +49,7 @@ window.onload = () => {
             index = i + 1;
           }
         }
-        //Si el index es igual a el número de la imagen quiere decir que la imagen esta en su sitio y le ponemos la class validada.
+        //Si el index es igual a el número de la imagen quiere decir que la imagen está en su sitio y le ponemos la clase validada.
         if (elemento.getAttribute("src").charAt(6) == index) {
           elemento.classList.add("validado");
         } else {
@@ -64,7 +67,7 @@ window.onload = () => {
   document.getElementById("reiniciar").addEventListener(
     "click",
     () => {
-      //Con esta metodo reiniciamos la página y la partida.
+      //Con esta método reiniciamos la página y la partida.
 
       location.reload();
     },

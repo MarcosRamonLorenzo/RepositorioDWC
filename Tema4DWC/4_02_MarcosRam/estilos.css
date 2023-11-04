@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(224, 255, 255);
+  background-color: #ffffdd;
 }
 #contenedorGeneralArrastable {
   margin: 3%;
@@ -12,7 +12,8 @@ body {
 }
 
 #contenedorImagenes {
-  border: 1px solid #315cfd;
+  border: 3px solid #a2c579;
+  background-color: #ffffdd;
   height: 28rem;
   width: 47rem;
 }
@@ -27,7 +28,7 @@ body {
 #contenedorPuzzle {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #315cfd;
+  border: 3px solid #a2c579;
 
   height: 28rem;
   width: 47rem;
@@ -37,7 +38,7 @@ body {
   width: 231.05px;
   height: 130px;
   margin: 1%;
-  border: #315cfd 1px solid;
+  border: #a2c579 2px solid;
 }
 
 #botonYwin {
@@ -51,7 +52,7 @@ body {
 button {
   width: 150px;
   height: 60px;
-  border: 1px solid #315cfd;
+  border: 1px solid #a2c579;
   border-radius: 45px;
   transition: all 0.3s;
   cursor: pointer;
@@ -62,7 +63,7 @@ button {
 }
 
 button:hover {
-  background: #315cfd;
+  background: #a2c579;
   color: white;
   font-size: 1.5em;
 }
@@ -70,7 +71,7 @@ button:hover {
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 70px;
-  color: green;
+  color: #a2c579;
 }
 
 .oculto {
